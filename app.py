@@ -740,9 +740,11 @@ elif page == "⭐ Influencer & Target":
         show_t1.columns = ['Username','Prob. Influencer','In-Degree','Betweenness','PageRank','Komentar','Balasan','Eng. Score']
         show_t1 = show_t1.reset_index(drop=True)
         show_t1.index += 1
-        st.dataframe(show_t1.style.background_gradient(subset=['Prob. Influencer'], cmap='Reds', vmin=0.5, vmax=1.0)
-                               .background_gradient(subset=['Eng. Score'], cmap='Blues'),
-                     use_container_width=True, height=420)
+        st.dataframe(
+    show_t1,
+    use_container_width=True,
+    height=420
+)
 
     with tab_t2:
         st.markdown(f"**{len(tier2)} Influencer Tier 2** (probabilitas {tier2_thresh}–{tier1_thresh})")

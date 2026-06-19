@@ -24,7 +24,7 @@ warnings.filterwarnings("ignore")
 # ── PAGE CONFIG ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="GNN Dashboard — Immoderma Skin Clinic",
-    page_icon="🧠",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -358,26 +358,26 @@ def train_all_models(_sna, _G):
 # SIDEBAR
 # ══════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.markdown("## 🧠 GNN Dashboard")
+    st.markdown("##  GNN Dashboard")
     st.markdown("**Immoderma Skin Clinic Purwokerto**")
     st.markdown("Prince Bayu Saputra · 2211103077")
     st.divider()
 
-    uploaded = st.file_uploader("📂 Upload instagram.csv", type=["csv"])
+    uploaded = st.file_uploader(" Upload instagram.csv", type=["csv"])
 
     st.divider()
-    st.markdown("### ⚙️ Konfigurasi Model")
+    st.markdown("###  Konfigurasi Model")
     tier1_thresh = st.slider("Threshold Tier 1 (prob ≥)", 0.50, 0.95, 0.70, 0.05)
     tier2_thresh = st.slider("Threshold Tier 2 (prob ≥)", 0.30, 0.70, 0.50, 0.05)
 
     st.divider()
-    st.markdown("### 📋 Navigasi")
+    st.markdown("###  Navigasi")
     page = st.radio("Halaman", [
-        "🏠 Overview",
-        "📊 Performa Model",
-        "🌐 Struktur Jaringan",
-        "⭐ Influencer & Target",
-        "📁 Export Data",
+        " Overview",
+        " Performa Model",
+        " Struktur Jaringan",
+        " Influencer & Target",
+        " Export Data",
     ], label_visibility="collapsed")
 
 
@@ -385,7 +385,7 @@ with st.sidebar:
 # MAIN CONTENT
 # ══════════════════════════════════════════════════════════════════════════════
 
-st.markdown("# 🧠 GNN Social Network Dashboard")
+st.markdown("#  GNN Social Network Dashboard")
 st.markdown("**Analisis Jaringan Sosial Instagram @immodermaskinclinic · Model: GCN · GAT · GIN**")
 st.divider()
 
